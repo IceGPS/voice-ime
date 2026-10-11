@@ -1,0 +1,21 @@
+# 模型与数据
+*.gguf
+*.onnx
+*.bin
+models/
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+# Android
+*.iml
+.gradle/
+local.properties
+/build/
+# 日志与录音（体积大，不进仓库）
+recordings/
+logs/*.wav
+# 系统
+.DS_Store
+Thumbs.db
