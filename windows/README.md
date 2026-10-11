@@ -1,28 +1,37 @@
-# 第一阶段 · Windows
+# 第一阶段 · Windows 11
+
 
 fork [CapsWriter-Offline](https://github.com/HaujetZhao/CapsWriter-Offline)（MIT），
 接入 Qwen3-ASR-1.7B，验证全部功能通过后才进入第二阶段。
 
+> 目标系统：Windows 11。验收标准：Hongjie 本人在自己电脑上实测全部通过，方可进入第二阶段。
+
+
 ## 验证清单
+
 
 ### 1. 环境构建
 - [ ] fork 后从源码构建通过
 - [ ] 服务端正常加载 Qwen3-ASR-1.7B GGUF + 标点模型
 - [ ] 记录显存/内存占用、冷启动耗时（参考：Vulkan 解码约 1.6GB 显存）
 
+
 ### 2. 断网全链路
 - [ ] 拔网线/飞行模式下：录音 → 转写 → 上屏 全链路可用
 - [ ] 热词文件（`hot-server.txt`）离线生效
+
 
 ### 3. 转写质量
 - [ ] 中文准确率（日常口音、专业词汇、中英混说）
 - [ ] 标点恢复正常；口语标点词（"逗号""换行"）自动转换
 - [ ] 松开 CapsLock 到上屏的延迟体感跟手
 
+
 ### 4. 语气词过滤接入
 - [ ] 过滤发生在转写＋标点恢复＋分句完成之后
 - [ ] 用正反例验证删留规则
 - [ ] 日志层保留原始版本，文档层输出过滤版本
+
 
 ### 5. 每日文档编译（重点）
 - [ ] 日志层字段盘点（时间戳、文本、录音路径）
@@ -32,10 +41,12 @@ fork [CapsWriter-Offline](https://github.com/HaujetZhao/CapsWriter-Offline)（MI
 - [ ] 完整性与幂等：重跑不重复、不丢失，人工修订被保留
 - [ ] 连续 3 天实跑无丢失
 
+
 ### 6. 编辑区自适应高度
 - [ ] 内容增加时自动增高（对标 Muse）
 - [ ] 设最大高度，超出后内部滚动，光标行始终可见
 - [ ] 内容删减后回缩
+
 
 ### 7. 稳定性
 - [ ] 挂机一天无内存泄漏
@@ -43,6 +54,9 @@ fork [CapsWriter-Offline](https://github.com/HaujetZhao/CapsWriter-Offline)（MI
 - [ ] 微信/Word/浏览器/IDE 上屏兼容
 - [ ] 开机自启、托盘常驻
 
+
 ## 退出条件
 
+
 以上全部通过 → 冻结文档编译器契约（见 `../shared/doc-compiler.md`）→ 启动第二阶段。
+
