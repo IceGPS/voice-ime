@@ -1,4 +1,6 @@
-# voice-ime
+# 留声输入法（Liusheng）
+
+*Offline Voice IME · 离线语音输入法*
 
 基于本地模型的离线语音输入法。按住说话、松开上屏；说过的每一句话，都会在每天结束时整理成一篇 Markdown 文档。
 
